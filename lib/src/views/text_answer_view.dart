@@ -90,9 +90,7 @@ class _TextAnswerViewState extends State<TextAnswerView> {
             child: TextField(
               textInputAction: TextInputAction.next,
               autofocus: true,
-              decoration: textFieldInputDecoration(
-                hint: _textAnswerFormat.hint,
-              ),
+              decoration: Theme.of(context).inputDecorationTheme.copyWith(hintText: _textAnswerFormat.hint),
               controller: _controller,
               textAlign: TextAlign.center,
               onChanged: (String text) {
