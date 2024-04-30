@@ -2,6 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:survey_kit/src/answer_format/multiple_choice_auto_complete_answer_format.dart';
+import 'package:survey_kit/src/views/widget/survey_divider.dart';
 import 'package:survey_kit/survey_kit.dart';
 
 class MultipleChoiceAutoCompleteAnswerView extends StatefulWidget {
@@ -77,9 +78,7 @@ class _MultipleChoiceAutoCompleteAnswerViewState
                 SizedBox(
                   height: 32,
                 ),
-                Divider(
-                  color: Colors.grey,
-                ),
+                SurveyDivider(),
                 ..._multipleChoiceAnswer.textChoices
                     .map(
                       (TextChoice tc) => SelectionListTile(
@@ -142,9 +141,7 @@ class _MultipleChoiceAutoCompleteAnswerViewState
                       ),
                     ),
                   ),
-                  Divider(
-                    color: Colors.grey,
-                  ),
+                  SurveyDivider(),
                 ],
               ],
             ),

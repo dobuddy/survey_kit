@@ -5,6 +5,7 @@ import 'package:survey_kit/src/result/question/single_choice_question_result.dar
 import 'package:survey_kit/src/steps/predefined_steps/question_step.dart';
 import 'package:survey_kit/src/views/widget/selection_list_tile.dart';
 import 'package:survey_kit/src/views/widget/step_view.dart';
+import 'package:survey_kit/src/views/widget/survey_divider.dart';
 
 class SingleChoiceAnswerView extends StatefulWidget {
   final QuestionStep questionStep;
@@ -68,9 +69,7 @@ class _SingleChoiceAnswerViewState extends State<SingleChoiceAnswerView> {
             ),
             Column(
               children: [
-                Divider(
-                  color: Colors.grey,
-                ),
+                SurveyDivider(),
                 ..._singleChoiceAnswerFormat.textChoices.map(
                   (TextChoice tc) {
                     return SelectionListTile(

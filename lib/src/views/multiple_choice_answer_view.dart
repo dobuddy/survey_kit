@@ -6,6 +6,7 @@ import 'package:survey_kit/src/result/question/multiple_choice_question_result.d
 import 'package:survey_kit/src/steps/predefined_steps/question_step.dart';
 import 'package:survey_kit/src/views/widget/selection_list_tile.dart';
 import 'package:survey_kit/src/views/widget/step_view.dart';
+import 'package:survey_kit/src/views/widget/survey_divider.dart';
 
 class MultipleChoiceAnswerView extends StatefulWidget {
   final QuestionStep questionStep;
@@ -71,9 +72,7 @@ class _MultipleChoiceAnswerView extends State<MultipleChoiceAnswerView> {
             ),
             Column(
               children: [
-                Divider(
-                  color: Colors.grey,
-                ),
+                SurveyDivider(),
                 ..._multipleChoiceAnswer.textChoices
                     .map(
                       (TextChoice tc) => SelectionListTile(
@@ -138,9 +137,7 @@ class _MultipleChoiceAnswerView extends State<MultipleChoiceAnswerView> {
                       ),
                     ),
                   ),
-                  Divider(
-                    color: Colors.grey,
-                  ),
+                  SurveyDivider(),
                 ],
               ],
             ),

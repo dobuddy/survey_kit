@@ -4,6 +4,7 @@ import 'package:survey_kit/src/result/question/boolean_question_result.dart';
 import 'package:survey_kit/src/steps/predefined_steps/question_step.dart';
 import 'package:survey_kit/src/views/widget/selection_list_tile.dart';
 import 'package:survey_kit/src/views/widget/step_view.dart';
+import 'package:survey_kit/src/views/widget/survey_divider.dart';
 
 class BooleanAnswerView extends StatefulWidget {
   final QuestionStep questionStep;
@@ -70,9 +71,7 @@ class _BooleanAnswerViewState extends State<BooleanAnswerView> {
           ),
           Column(
             children: [
-              Divider(
-                color: Colors.grey,
-              ),
+              SurveyDivider(),
               SelectionListTile(
                 text: _answerFormat.positiveAnswer,
                 onTap: () {

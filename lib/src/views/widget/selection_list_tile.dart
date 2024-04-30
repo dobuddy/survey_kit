@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:survey_kit/src/views/widget/survey_divider.dart';
 
 class SelectionListTile extends StatelessWidget {
   final String text;
@@ -42,9 +43,7 @@ class SelectionListTile extends StatelessWidget {
             onTap: () => onTap.call(),
           ),
         ),
-        Divider(
-          color: Colors.grey,
-        ),
+        SurveyDivider(),
       ],
     );
   }

@@ -4,6 +4,7 @@ import 'package:survey_kit/src/answer_format/multiple_double_answer_format.dart'
 import 'package:survey_kit/src/result/question/multiple_double_question_result.dart';
 import 'package:survey_kit/src/steps/predefined_steps/question_step.dart';
 import 'package:survey_kit/src/views/widget/step_view.dart';
+import 'package:survey_kit/src/views/widget/survey_divider.dart';
 
 class MultipleDoubleAnswerView extends StatefulWidget {
   final QuestionStep questionStep;
@@ -100,9 +101,7 @@ class _MultipleDoubleAnswerViewState extends State<MultipleDoubleAnswerView> {
             ),
             Column(
               children: [
-                Divider(
-                  color: Colors.grey,
-                ),
+                SurveyDivider(),
                 ..._multipleDoubleAnswer.hints
                     .asMap()
                     .entries
