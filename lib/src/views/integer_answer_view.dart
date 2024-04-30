@@ -77,7 +77,9 @@ class _IntegerAnswerViewState extends State<IntegerAnswerView> {
           child: TextField(
             textInputAction: TextInputAction.next,
             autofocus: true,
-            decoration: Theme.of(context).inputDecorationTheme.copyWith(hintText: _doubleAnswerFormat.hint),
+            decoration: textFieldInputDecoration(
+              hint: _integerAnswerFormat.hint,
+            ),
             controller: _controller,
             onChanged: (String value) {
               _checkValidation(value);
